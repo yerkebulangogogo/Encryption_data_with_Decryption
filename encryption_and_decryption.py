@@ -1,8 +1,9 @@
-import math
 alphabit = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ',', '.', '!', "?", "@", "'", ':', ";", "(", ')', '-',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ',', '.', '!', "?", "@", "'", ':', ";",
+            "(", ')', '-',
             'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ',', '.', '!', '?', "@", "'", ':', ";", "(", ')', '-'
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ',', '.', '!', '?', "@", "'", ':', ";",
+            "(", ')', '-'
             ]
 space = []
 id_plain_text = []
@@ -11,7 +12,7 @@ id_answer = []
 word_text = input('Write main text: ')
 cypher_text = input('Write cypher text: ')
 back_up = cypher_text
-#Encryption part 1 (Viginer part)
+# Encryption part 1 (Viginer part)
 for i in range(len(word_text)):
     if word_text[i] == " ":
         space.append(i)
@@ -43,10 +44,9 @@ for i in range(len(cypher_text)):
     if flag:
         break
 
-long_from_main = math.ceil(len(id_plain_text) / len(id_cypher_text))
-for i in range(long_from_main - 1):
-    for j in range(len(id_cypher_text)):
-        id_cypher_text.append(id_cypher_text[j])
+for i in range(len(id_plain_text)):
+    temp = i % len(id_cypher_text)
+    id_cypher_text.append(id_cypher_text[temp])
 for i in range(len(id_plain_text)):
     answer = (alphabit[id_plain_text[i] + id_cypher_text[i]])
     id_answer.append(answer)
@@ -58,7 +58,7 @@ for i in range(len(id_answer)):
 print('FIRST ENCRYPTION ANSWER: {}'.format(answer_final))
 print('1/2')
 
-#Encryption part #2(Caesar part)
+# Encryption part #2(Caesar part)
 number_encryption = len(cypher_text)
 plain_text_part_2 = answer_final
 space_2 = []
@@ -90,14 +90,14 @@ for i in range(len(final_list_2)):
 print('SECOND ENCRYPTION ANSWER: {}'.format(answer_final_2))
 print('2/2')
 
-#Decryption part:   1/2
+# Decryption part:   1/2
 print('Decryption part:   1/2')
 decrypted_word_2 = answer_final_2
 decrypted_number_2 = number_encryption
 decrypted_space_location = []
 decrypted_word_finaly_2 = []
-decrypted_word_list_2 =[]
-decrypted_id_word_list_2 =[]
+decrypted_word_list_2 = []
+decrypted_id_word_list_2 = []
 
 for i in range(len(decrypted_word_2)):
     if decrypted_word_2[i] == ' ':
@@ -130,7 +130,7 @@ for i in range(len(decrypted_word_finaly_2)):
     decrypted_finaly_answer_2 += decrypted_word_finaly_2[i]
 print('Answer: {}'.format(decrypted_finaly_answer_2))
 
-#Decryption part:   2/2
+# Decryption part:   2/2
 print('Decryption part:   2/2')
 decrypted_word_3 = decrypted_finaly_answer_2
 decrypted_cypher_3 = cypher_text
