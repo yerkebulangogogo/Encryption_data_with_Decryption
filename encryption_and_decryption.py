@@ -1,9 +1,9 @@
 alphabit = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ',', '.', '!', "?", "@", "'", ':', ";",
-            "(", ')', '-',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            ',', '.', '!', "?", "@", "'", ':', ";", "(", ')', '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
             'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ',', '.', '!', '?', "@", "'", ':', ";",
-            "(", ')', '-'
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            ',', '.', '!', '?', "@", "'", ':', ";", "(", ')', '-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
             ]
 space = []
 id_plain_text = []
@@ -119,7 +119,7 @@ for i in range(len(decrypted_word_list_2)):
     if flag:
         break
 for i in range(len(decrypted_id_word_list_2)):
-    decrypted_temp_2 = alphabit[37 + decrypted_id_word_list_2[i] - decrypted_number_2]
+    decrypted_temp_2 = alphabit[47 + decrypted_id_word_list_2[i] - decrypted_number_2]
     decrypted_word_finaly_2.append(decrypted_temp_2)
 
 for i in range(len(decrypted_space_location)):
@@ -175,7 +175,7 @@ for i in range(len(decrypted_cypher_list_3)):
     if flag:
         break
 for i in range(len(decrypted_id_word_list_3)):
-    decrypted_temp_3 = alphabit[37 + decrypted_id_word_list_3[i] - decrypted_id_cypher_list_3[i]]
+    decrypted_temp_3 = alphabit[47 + decrypted_id_word_list_3[i] - decrypted_id_cypher_list_3[i]]
     decrypted_word_finaly_3.append(decrypted_temp_3)
 
 for i in range(len(decrypted_space_location_3)):
